@@ -2,6 +2,7 @@
  import './UserInput.css'
  import axios from 'axios';
  import { error } from 'console';
+ import {Link} from 'react-router-dom';
 
 // function userData(){
 //     var userNameInput = document.getElementById("username")as HTMLInputElement || null;
@@ -54,32 +55,29 @@
 
    //  var content = "";
 
-     dataSalespersonArray.forEach((dados) => {
+    //  dataSalespersonArray.forEach((dados) => {
 
-        var content = "";
+    //     var content = "";
 
-        var content += `
-           <div className="cards">
-           <div className="cardImg">
-            <img src="${dados.name}" alt="" />
-          </div>
-          <div className="cardTitle">
-            ${dados.LastName}
-          </div>
-          <div className="cardSubTitle">
-            ${dados.phoneNumber}
-          </div>
-        </div>
-      `;
+    //     var content += `
+    //        <div className="cards">
+    //        <div className="cardImg">
+    //         <img src="${dados.name}" alt="" />
+    //       </div>
+    //       <div className="cardTitle">
+    //         ${dados.LastName}
+    //       </div>
+    //       <div className="cardSubTitle">
+    //         ${dados.phoneNumber}
+    //       </div>
+    //     </div>
+    //   `;
             
           
-     });
+    //  });
 
-     divId=;
+    //  divId=;
 
-
-
-    }
 
  function UserInput(){
      return(
@@ -94,16 +92,6 @@
           <input type= "text" id= "userLastName"/>           
       </div>
 
-      <div className='userInputPhobeNumber'>
-          <label>Telefone:</label>
-          <input type= "text" id= "userPhoneNumber"/>
-      </div>
-
-      <div className='userInputAddress'>
-         <label>Endereço:</label>
-         <input type= "text" id= "userAddress"/>
-      </div>
-
       <div className='userInputEmail'>
         <label>E-mail:</label>
         <input type="text" id= "userEmail"/>
@@ -115,9 +103,7 @@
        </div>
       </div>
 
-     
      );
 }
-
 
 export default UserInput;

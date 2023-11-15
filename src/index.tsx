@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import Mensagem from './components/mensagem/Mensagem';
 import UserInput from './components/userInput/UserInput';
 import NavBar from './components/navbar/NavBar';
-import Produtos from './components/produtos/Produtos';
 import Card from './components/card/Card';
+
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,10 +16,16 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <NavBar/>
-    <Produtos/>
+    <BrowserRouter basename='pi' >
+    <Routes>
+      <Route>
+        <Route path='/' element={<NavBar/>}/>
+        <Route path='/produtos' element={<Card/>} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
     <Card/>
     <UserInput/>
-    {/* (<Mensagem/>)  */}
     {/* (<App/>) */}
   </React.StrictMode>
 );
